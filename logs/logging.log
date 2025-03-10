@@ -1,0 +1,40 @@
+[2025-03-10 15:42:21,785: INFO: Loaded file: config\config.yaml]
+[2025-03-10 15:44:05,111: INFO: Loaded file: config\config.yaml]
+[2025-03-10 15:46:25,272: INFO: Loaded file: config\config.yaml]
+[2025-03-10 15:46:25,275: INFO: Loaded file: params.yaml]
+[2025-03-10 16:05:51,057: INFO: Loaded file: config\config.yaml]
+[2025-03-10 16:05:51,059: INFO: Loaded file: params.yaml]
+[2025-03-10 16:05:56,112: INFO: Loaded file: config\config.yaml]
+[2025-03-10 16:05:56,116: INFO: Loaded file: params.yaml]
+[2025-03-10 16:06:24,975: INFO: Loaded file: config\config.yaml]
+[2025-03-10 16:06:24,978: INFO: Loaded file: params.yaml]
+[2025-03-10 16:06:24,980: INFO: Loaded file: schema.yaml]
+[2025-03-10 16:06:24,983: INFO: Created directory at: artifacts]
+[2025-03-10 16:06:24,986: INFO: Created directory at: artifacts/data_ingestion]
+[2025-03-10 16:06:26,700: INFO: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 7EB6:BD33D:80D3:9DED:67CF4641
+Accept-Ranges: bytes
+Date: Mon, 10 Mar 2025 20:06:26 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ewr-kewr1740075-EWR
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1741637186.221298,VS0,VE78
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: c581027bb16dc28164ea6f8a6ecd23bccf72c089
+Expires: Mon, 10 Mar 2025 20:11:26 GMT
+Source-Age: 0
+
+]
