@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This project is an end-to-end **Wine Quality Prediction Pipeline** that automates the entire machine learning workflow. The pipeline processes wine dataset features to predict the quality of wine based on physicochemical properties.
+This project is an end-to-end **Wine Quality Prediction Pipeline** that automates the entire machine learning workflow. The pipeline processes wine dataset features to predict the quality of wine based on wine properties.
 
 ## 🚀 Features
 
