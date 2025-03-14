@@ -432,3 +432,127 @@ mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/exper
 [2025-03-14 15:44:25,249: INFO: Created directory at: artifacts/model_evaluation]
 [2025-03-14 15:44:26,319: INFO: json file saved at: artifacts\model_evaluation\metrics.json]
 [2025-03-14 15:44:35,442: INFO: Completed Model Evaluation Stage]
+[2025-03-14 16:00:38,857: INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.7:8080]
+[2025-03-14 16:00:38,857: INFO: [33mPress CTRL+C to quit[0m]
+[2025-03-14 16:00:45,137: INFO: 127.0.0.1 - - [14/Mar/2025 16:00:45] "GET / HTTP/1.1" 200 -]
+[2025-03-14 16:00:45,163: INFO: 127.0.0.1 - - [14/Mar/2025 16:00:45] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-03-14 16:00:45,308: INFO: 127.0.0.1 - - [14/Mar/2025 16:00:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-03-14 16:01:28,800: INFO: Starting Data Ingestion Stage]
+[2025-03-14 16:01:28,803: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:01:28,804: INFO: Loaded file: params.yaml]
+[2025-03-14 16:01:28,805: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:01:28,806: INFO: Created directory at: artifacts]
+[2025-03-14 16:01:28,807: INFO: Created directory at: artifacts/data_ingestion]
+[2025-03-14 16:01:28,808: INFO: File already exists]
+[2025-03-14 16:01:28,811: INFO: Completed Data Ingestion Stage]
+[2025-03-14 16:01:28,811: INFO: Starting Data Validation Stage]
+[2025-03-14 16:01:28,814: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:01:28,815: INFO: Loaded file: params.yaml]
+[2025-03-14 16:01:28,817: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:01:28,818: INFO: Created directory at: artifacts]
+[2025-03-14 16:01:28,818: INFO: Created directory at: artifacts/data_validation]
+[2025-03-14 16:01:28,841: INFO: Completed Data Validation Stage]
+[2025-03-14 16:01:28,842: INFO: Starting Data Transformation Stage]
+[2025-03-14 16:01:28,857: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:01:28,858: INFO: Loaded file: params.yaml]
+[2025-03-14 16:01:28,860: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:01:28,861: INFO: Created directory at: artifacts]
+[2025-03-14 16:01:28,861: INFO: Created directory at: artifacts/data_transformation]
+[2025-03-14 16:01:28,876: INFO: Train and Test data saved.]
+[2025-03-14 16:01:28,876: INFO: Train data shape: (1199, 12)]
+[2025-03-14 16:01:28,877: INFO: Test data shape: (400, 12)]
+[2025-03-14 16:01:28,877: INFO: Completed Data Transformation Stage]
+[2025-03-14 16:01:28,877: INFO: Starting Model Training Stage]
+[2025-03-14 16:01:28,879: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:01:28,880: INFO: Loaded file: params.yaml]
+[2025-03-14 16:01:28,882: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:01:28,882: INFO: Created directory at: artifacts]
+[2025-03-14 16:01:28,883: INFO: Created directory at: artifacts/model_training]
+[2025-03-14 16:01:28,929: INFO: Completed Model Training Stage]
+[2025-03-14 16:01:28,932: INFO: Starting Model Evaluation Stage]
+[2025-03-14 16:01:28,936: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:01:28,937: INFO: Loaded file: params.yaml]
+[2025-03-14 16:01:28,939: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:01:28,940: INFO: Created directory at: artifacts]
+[2025-03-14 16:01:28,941: INFO: Created directory at: artifacts/model_evaluation]
+[2025-03-14 16:01:29,767: ERROR: API request to endpoint /api/2.0/mlflow/experiments/get-by-name failed with error code 404 != 200. Response body: '']
+Traceback (most recent call last):
+  File "D:\Projects\Wine-Quality-Prediction-Pipeline\main.py", line 55, in <module>
+    model_evaluation_pipeline.initiate_model_evaluation()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Projects\Wine-Quality-Prediction-Pipeline\src\wine_quality_pipline\pipeline\model_evaluation_pipeline.py", line 16, in initiate_model_evaluation
+    model_evaluation.log_into_mlflow()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Projects\Wine-Quality-Prediction-Pipeline\src\wine_quality_pipline\components\model_evaluation.py", line 35, in log_into_mlflow
+    mlflow.set_experiment("wine_quality_prediction")
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Projects\Wine-Quality-Prediction-Pipeline\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 157, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+  File "d:\Projects\Wine-Quality-Prediction-Pipeline\venv\Lib\site-packages\mlflow\tracking\client.py", line 1324, in get_experiment_by_name
+    return self._tracking_client.get_experiment_by_name(name)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "d:\Projects\Wine-Quality-Prediction-Pipeline\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 586, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "d:\Projects\Wine-Quality-Prediction-Pipeline\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 641, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+  File "d:\Projects\Wine-Quality-Prediction-Pipeline\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 90, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "d:\Projects\Wine-Quality-Prediction-Pipeline\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 392, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "d:\Projects\Wine-Quality-Prediction-Pipeline\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 255, in verify_rest_response
+    raise MlflowException(
+    ...<2 lines>...
+    )
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/experiments/get-by-name failed with error code 404 != 200. Response body: ''
+[2025-03-14 16:01:30,089: INFO: 127.0.0.1 - - [14/Mar/2025 16:01:30] "GET /train HTTP/1.1" 200 -]
+[2025-03-14 16:02:26,429: INFO: Starting Data Ingestion Stage]
+[2025-03-14 16:02:26,432: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:02:26,433: INFO: Loaded file: params.yaml]
+[2025-03-14 16:02:26,434: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:02:26,435: INFO: Created directory at: artifacts]
+[2025-03-14 16:02:26,435: INFO: Created directory at: artifacts/data_ingestion]
+[2025-03-14 16:02:26,436: INFO: File already exists]
+[2025-03-14 16:02:26,439: INFO: Completed Data Ingestion Stage]
+[2025-03-14 16:02:26,439: INFO: Starting Data Validation Stage]
+[2025-03-14 16:02:26,442: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:02:26,442: INFO: Loaded file: params.yaml]
+[2025-03-14 16:02:26,444: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:02:26,445: INFO: Created directory at: artifacts]
+[2025-03-14 16:02:26,445: INFO: Created directory at: artifacts/data_validation]
+[2025-03-14 16:02:26,467: INFO: Completed Data Validation Stage]
+[2025-03-14 16:02:26,467: INFO: Starting Data Transformation Stage]
+[2025-03-14 16:02:26,471: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:02:26,472: INFO: Loaded file: params.yaml]
+[2025-03-14 16:02:26,473: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:02:26,474: INFO: Created directory at: artifacts]
+[2025-03-14 16:02:26,475: INFO: Created directory at: artifacts/data_transformation]
+[2025-03-14 16:02:26,489: INFO: Train and Test data saved.]
+[2025-03-14 16:02:26,489: INFO: Train data shape: (1199, 12)]
+[2025-03-14 16:02:26,490: INFO: Test data shape: (400, 12)]
+[2025-03-14 16:02:26,490: INFO: Completed Data Transformation Stage]
+[2025-03-14 16:02:26,490: INFO: Starting Model Training Stage]
+[2025-03-14 16:02:26,492: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:02:26,493: INFO: Loaded file: params.yaml]
+[2025-03-14 16:02:26,495: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:02:26,495: INFO: Created directory at: artifacts]
+[2025-03-14 16:02:26,496: INFO: Created directory at: artifacts/model_training]
+[2025-03-14 16:02:26,532: INFO: Completed Model Training Stage]
+[2025-03-14 16:02:26,532: INFO: Starting Model Evaluation Stage]
+[2025-03-14 16:02:26,534: INFO: Loaded file: config\config.yaml]
+[2025-03-14 16:02:26,535: INFO: Loaded file: params.yaml]
+[2025-03-14 16:02:26,536: INFO: Loaded file: schema.yaml]
+[2025-03-14 16:02:26,537: INFO: Created directory at: artifacts]
+[2025-03-14 16:02:26,537: INFO: Created directory at: artifacts/model_evaluation]
+[2025-03-14 16:02:28,111: INFO: json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-03-14 16:02:37,612: INFO: Completed Model Evaluation Stage]
+[2025-03-14 16:02:38,042: INFO: 127.0.0.1 - - [14/Mar/2025 16:02:38] "GET /train HTTP/1.1" 200 -]
+[2025-03-14 16:03:05,024: INFO: 127.0.0.1 - - [14/Mar/2025 16:03:05] "GET / HTTP/1.1" 200 -]
+[2025-03-14 16:03:05,048: INFO: 127.0.0.1 - - [14/Mar/2025 16:03:05] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-03-14 16:03:26,013: INFO: 127.0.0.1 - - [14/Mar/2025 16:03:26] "POST /predict HTTP/1.1" 200 -]
+[2025-03-14 16:04:16,989: INFO: 127.0.0.1 - - [14/Mar/2025 16:04:16] "GET /predict HTTP/1.1" 200 -]
+[2025-03-14 16:04:17,010: INFO: 127.0.0.1 - - [14/Mar/2025 16:04:17] "[33mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 404 -]
+[2025-03-14 16:04:30,283: INFO: 127.0.0.1 - - [14/Mar/2025 16:04:30] "POST /predict HTTP/1.1" 200 -]
