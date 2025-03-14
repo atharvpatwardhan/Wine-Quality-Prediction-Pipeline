@@ -37,6 +37,7 @@ The Flask-based UI allows users to input wine features and get instant predictio
 ### **Run the Flask App**
 
 ```bash
-cd app
 python app.py
 ```
+
+Use the route **/train** to train the model before predicting values through the ui.
