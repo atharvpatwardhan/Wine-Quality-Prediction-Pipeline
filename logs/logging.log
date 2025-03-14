@@ -1,17 +1,10 @@
-[2025-03-10 15:42:21,785: INFO: Loaded file: config\config.yaml]
-[2025-03-10 15:44:05,111: INFO: Loaded file: config\config.yaml]
-[2025-03-10 15:46:25,272: INFO: Loaded file: config\config.yaml]
-[2025-03-10 15:46:25,275: INFO: Loaded file: params.yaml]
-[2025-03-10 16:05:51,057: INFO: Loaded file: config\config.yaml]
-[2025-03-10 16:05:51,059: INFO: Loaded file: params.yaml]
-[2025-03-10 16:05:56,112: INFO: Loaded file: config\config.yaml]
-[2025-03-10 16:05:56,116: INFO: Loaded file: params.yaml]
-[2025-03-10 16:06:24,975: INFO: Loaded file: config\config.yaml]
-[2025-03-10 16:06:24,978: INFO: Loaded file: params.yaml]
-[2025-03-10 16:06:24,980: INFO: Loaded file: schema.yaml]
-[2025-03-10 16:06:24,983: INFO: Created directory at: artifacts]
-[2025-03-10 16:06:24,986: INFO: Created directory at: artifacts/data_ingestion]
-[2025-03-10 16:06:26,700: INFO: artifacts/data_ingestion/data.zip download! with following info: 
+[2025-03-13 19:19:46,297: INFO: Starting Data Ingestion Stage]
+[2025-03-13 19:19:46,298: INFO: Loaded file: config\config.yaml]
+[2025-03-13 19:19:46,300: INFO: Loaded file: params.yaml]
+[2025-03-13 19:19:46,301: INFO: Loaded file: schema.yaml]
+[2025-03-13 19:19:46,301: INFO: Created directory at: artifacts]
+[2025-03-13 19:19:46,302: INFO: Created directory at: artifacts/data_ingestion]
+[2025-03-13 19:19:47,093: INFO: artifacts/data_ingestion/data.zip download! with following info: 
 Connection: close
 Content-Length: 23329
 Cache-Control: max-age=300
@@ -22,19 +15,20 @@ Strict-Transport-Security: max-age=31536000
 X-Content-Type-Options: nosniff
 X-Frame-Options: deny
 X-XSS-Protection: 1; mode=block
-X-GitHub-Request-Id: 7EB6:BD33D:80D3:9DED:67CF4641
+X-GitHub-Request-Id: 8B12:2A12F6:169A3B:1CD0CA:67D36813
 Accept-Ranges: bytes
-Date: Mon, 10 Mar 2025 20:06:26 GMT
+Date: Thu, 13 Mar 2025 23:19:47 GMT
 Via: 1.1 varnish
-X-Served-By: cache-ewr-kewr1740075-EWR
+X-Served-By: cache-ewr-kewr1740020-EWR
 X-Cache: MISS
 X-Cache-Hits: 0
-X-Timer: S1741637186.221298,VS0,VE78
+X-Timer: S1741907987.186473,VS0,VE102
 Vary: Authorization,Accept-Encoding,Origin
 Access-Control-Allow-Origin: *
 Cross-Origin-Resource-Policy: cross-origin
-X-Fastly-Request-ID: c581027bb16dc28164ea6f8a6ecd23bccf72c089
-Expires: Mon, 10 Mar 2025 20:11:26 GMT
+X-Fastly-Request-ID: 73485f02c9bf0ef5289305bc9719406b5ab7c22c
+Expires: Thu, 13 Mar 2025 23:24:47 GMT
 Source-Age: 0
 
 ]
+[2025-03-13 19:19:47,106: INFO: Completed Data Ingestion Stage]
