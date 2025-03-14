@@ -16,7 +16,7 @@ This project is an end-to-end **Wine Quality Prediction Pipeline** that automate
 - **Data Ingestion:** Loads the wine dataset and handles missing values.
 - **Data Validation:** Ensures the dataset meets required schema constraints.
 - **Data Transformation:** Prepares features by scaling and encoding categorical variables.
-- **Model Training:** Trains the model using algorithms like Random Forest, XGBoost, or others.
+- **Model Training:** Trains the model using ElasticNet regression.
 - **Model Evaluation:** Logs performance metrics using MLflow for tracking and comparison.
 - **Model Prediction:** Deploys the trained model via a Flask web application.
 
