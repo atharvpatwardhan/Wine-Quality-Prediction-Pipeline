@@ -2,7 +2,7 @@ from src.wine_quality_pipline.config.configuration import ConfigurationManager
 from src.wine_quality_pipline.components.data_validation import DataValidation
 from src.wine_quality_pipline import logger
 
-STAGE_NAME = "Data Logging Stage"
+STAGE_NAME = "Data Validation Stage"
 
 
 class DataValidationPipeline:
